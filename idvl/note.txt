@@ -1,0 +1,6 @@
+python main2.py ../data/adj.pkl ../data/feature.npy ../data/data_layer_norm.csv
+python main2.py ../attacker/adj.pkl ../attacker/feature.npy ../attacker/attacker_layer_norm.csv
+python combined.py ../data/adj.pkl ../data/feature.npy ../data/data_combined.csv
+python combined.py ../attacker/adj.pkl ../attacker/feature.npy ../attacker/attacker_combined.csv
+python main2.py ../data/adj.pkl ../data/feature.npy ../data/data_layer_norm1.csv
+python main2.py ../attacker/adj.pkl ../attacker/feature.npy ../attacker/attacker_layer_norm1.csv

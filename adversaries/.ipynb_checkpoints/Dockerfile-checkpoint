@@ -1,0 +1,10 @@
+FROM tensorflow/tensorflow:2.1.0-gpu-py3
+
+COPY ./files /app
+
+WORKDIR /app
+
+RUN pip install -U pip -i https://pypi.tuna.tsinghua.edu.cn/simple && \
+    pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple 
+
+ENTRYPOINT ["bash","run.sh"]
