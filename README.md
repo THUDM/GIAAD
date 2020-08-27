@@ -12,33 +12,54 @@ adversaries, cccn, ntt docomo labs, daftstone, dminer, idvl, msu-psu-dse, neutri
 The original submissions are under Docker virtual environment.  **Docker (https://www.docker.com/legal/docker-terms-service)** currently does not allow people or entities on the U.S. Department of Treasury's List of Specially Designated Nationals or the U.S. Department of Commerce's Entity List to use.  **We remove all docker-related issues in the released codes and unify the environments.**
 
 The codes are under the following environments
+``
 python 3.7.3 cuda 10.1
-numpy=1.16.4
-networkx=2.3
-torch=1.6.0+cu101
-torch-cluster=1.5.7
-torch-geometric=1.6.1
-torch-scatter=2.0.5
-torch-sparse=0.6.7
-torch-spline-conv=1.2.0
-torchvision=0.7.0+cu101
-tf-slim=1.1.0
-tensorflow=2.0.0
-dgl-cu101=0.5.0
-joblib=0.13.2
-xgboost=1.2.0
-scikit-learn=0.21.2
-rdflib=4.2.2
-scipy=1.5.0
-pandas=0.24.2
 
+numpy=1.16.4
+
+networkx=2.3
+
+torch=1.6.0+cu101
+
+torch-cluster=1.5.7
+
+torch-geometric=1.6.1
+
+torch-scatter=2.0.5
+
+torch-sparse=0.6.7
+
+torch-spline-conv=1.2.0
+
+torchvision=0.7.0+cu101
+
+tf-slim=1.1.0
+
+tensorflow=2.0.0
+
+dgl-cu101=0.5.0
+
+joblib=0.13.2
+
+xgboost=1.2.0
+
+scikit-learn=0.21.2
+
+rdflib=4.2.2
+
+scipy=1.5.0
+
+pandas=0.24.2
+``
 
 Once you setup the environments, you can start your trial.
 
 To attack, you shall create a package under ``submissions`` package with an ``adj.pkl`` representing the injection nodes' links and ``features.npy`` representing their features. We already provide the submission attack files. For example, to evaluate on the submissions of speit, all you need is to unzip it.
 
-``cd submissions
-unzip -d speit speit.zip
+``cd submissions 
+
+unzip -d speit speit.zip 
+
 cd ..``
 
 ``run.py`` performs a way to evaluate attacks over defense models, or defend over attack submissions. To run evaluate the attack submission of ``speit``, you 
