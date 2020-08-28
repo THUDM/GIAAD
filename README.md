@@ -9,57 +9,70 @@ For an attack, the attacker needs to provide a set of injection nodes to attack 
 We provide the top 12 defense models by competitors, 
 adversaries, cccn, ntt docomo labs, daftstone, dminer, idvl, msu-psu-dse, neutrino, simongeisler, speit, tsail, u1234x1234, they're top defense models which achieves the highest average scores against various attacks. Most of these defenses involve a filter process which filters out nodes that are likely to be injection nodes (e.g. having features with absolute values larger then 0.4, or having more than 90 degree), incorporates a feature normalization process, or adopt sampling when doing node aggregations. 
 
-The original submissions are under Docker virtual environment.  **Docker (https://www.docker.com/legal/docker-terms-service)** currently does not allow people or entities on the U.S. Department of Treasury's List of Specially Designated Nationals or the U.S. Department of Commerce's Entity List to use.  **We remove all docker-related issues in the released codes and unify the environments.**
+The original submissions are under Docker virtual environment.  To enable usage for people with difficulty to access docker, and also unify the working environment, **we remove all docker-related issues in the released codes and unify the environments of their codes.**
 
 The codes are under the following environments
-``
-python 3.7.3 cuda 10.1
 
-numpy=1.16.4
+``python 3.7.3 cuda 10.1``
 
-networkx=2.3
+``numpy=1.16.4``
 
-torch=1.6.0+cu101
+``networkx=2.3``
 
-torch-cluster=1.5.7
+``torch=1.6.0+cu101``
 
-torch-geometric=1.6.1
+``torch-cluster=1.5.7``
 
-torch-scatter=2.0.5
+``torch-geometric=1.6.1``
 
-torch-sparse=0.6.7
+``torch-scatter=2.0.5``
 
-torch-spline-conv=1.2.0
+``torch-sparse=0.6.7``
 
-torchvision=0.7.0+cu101
+``torch-spline-conv=1.2.0``
 
-tf-slim=1.1.0
+``torchvision=0.7.0+cu101``
 
-tensorflow=2.0.0
+``tf-slim=1.1.0``
 
-dgl-cu101=0.5.0
+``tensorflow=2.0.0``
 
-joblib=0.13.2
+``dgl-cu101=0.5.0``
 
-xgboost=1.2.0
+``joblib=0.13.2``
 
-scikit-learn=0.21.2
+``xgboost=1.2.0``
 
-rdflib=4.2.2
+``scikit-learn=0.21.2``
 
-scipy=1.5.0
+``rdflib=4.2.2``
 
-pandas=0.24.2
-``
+``scipy=1.5.0``
+
+``pandas=0.24.2``
+
 
 Once you setup the environments, you can start your trial.
 
 To attack, you shall create a package under ``submissions`` package with an ``adj.pkl`` representing the injection nodes' links and ``features.npy`` representing their features. We already provide the submission attack files. For example, to evaluate on the submissions of speit, all you need is to unzip it.
 
-``cd submissions 
+``cd submissions`` 
 
-unzip -d speit speit.zip 
+``unzip -d speit speit.zip ``
 
-cd ..``
+``cd ..``
 
-``run.py`` performs a way to evaluate attacks over defense models, or defend over attack submissions. To run evaluate the attack submission of ``speit``, you 
+``run.py`` performs a way to evaluate attacks over defense models, or defend over attack submissions. To run evaluate the attack submission of ``speit``, you can run
+
+``python run.py --gpu 0 --mode attack --apaths speit``
+
+You can also build up your own attacks, put it in a directory under ``submissions`` directory and evaluate your own attack on the defense models.
+
+We show two scores, the **average score** which is the average accuracy on the test set of the attack over all defenders, and the **attack score** is the average accuracy over 3 best defenders. An attack shall generalize to all defenders so the evaluation is based on the average of 3 best defends against the attack. 
+
+We also support evaluation of defense models. To run defend on a certain model, for example, ``speit``, run 
+
+``python run.py --gpu 0 --mode defend --evaluation speit``
+
+Like attacks, we also show two scores for defense: the **average score** which is the average accuracy on the test set of the defense model over all attacks,(you shall unzip all of the attacks in ``submissions`` first) and the **defend score**  is the average accuracy over 3 best attack. A defend shall be robust to generalize on all sorts of attacks so the evaluation is based on the average of 3 best attacks against the defender.
+
