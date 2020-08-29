@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(description="Run .")
 parser.add_argument('--mode',default='attack')
 parser.add_argument('--apaths',nargs='+',type=str,default=['no','DeepBlueAI'])
 parser.add_argument('--evaluate',nargs='+',type=str,default=['arbitary'])
-parser.add_argument('--gpu',default='7')
+parser.add_argument('--gpu',default='0')
 args=parser.parse_args()
 if isinstance(args.apaths,str):
     args.apath=[args.apath]
@@ -21,11 +21,10 @@ print("mode",args.mode)
 os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
 base_adj=pkl.load(open("dset/testset_adj.pkl",'rb'))
 base_features=np.load("dset/features.npy")
-labels=np.load("dset/labels.npy")
+labels=np.load("dset/labels_test.npy")
 
 start=len(base_features)-50000
 end=len(base_features)
-labels=labels[start:end]
 
 def evaluate_adversaries(adj,features,labels):
     from adversaries import predict
@@ -157,7 +156,9 @@ def combine_features(adj,features,name):
    # print(adj_added.shape)
     
     adj=sp.hstack([add_adj.transpose(),adj])
-   
+    for i in range(len(adj.data)):
+        if (adj.data[i]!=0) and (adj.data[i]!=1):
+            adj.data[i]=1
     return adj.tocsr(),nfeature
 
 if __name__ == "__main__":
