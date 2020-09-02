@@ -1,0 +1,72 @@
+Performance of attacks & defenses**
+
+Attacks: (Avg. Score: average score on all defense models, Atk. Score: average score on 3 defense models that defenses best against the attack) 
+
+
+Attack       Avg. Score          Atk. Score
+
+no attack       65.39               69.85
+
+ADVERSARIES     63.98               69.01
+
+DaftStone       63.80               69.37
+
+DeepBlueAI      61.68               68.91
+
+Dminers         63.96               68.91
+
+Fengari         64.36               68.91
+
+GraphOverflow   64.36               68.96
+
+MSU_PSU_DSE     65.27               69.84
+
+NTTDOCOMOLABS   62.70               69.02
+
+Neutrino        64.28               68.91
+
+RunningZ        64.37               68.91
+
+SPEIT           61.86               69.16
+
+Selina          64.59               68.91
+
+TSAIL           64.07               68.91
+
+cccn            63.68               69.32
+
+darkhorse       64.15               68.91
+
+kaige           64.46               69.04
+
+idvl            64.07               68.98
+
+hhhvjk          64.71               68.91
+
+fashui01        64.27               68.91
+
+shengz          64.38               68.91
+
+sc              64.80               69.44
+
+simongeisler    61.41               69.11
+
+tofu            64.29               68.91
+
+yama            63.94               68.28
+
+yaowenxi        64.17               68.91
+
+tzpppp          64.69               68.91
+
+u1234x1234      62.25               67.14
+
+zhangs          63.90               68.91
+
+
+
+
+
+
+Defenses: (Avg. Score: average score on all attacks, Atk. Score: average score on 3 attacks that attacks best against the model)
+
