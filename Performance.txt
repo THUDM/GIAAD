@@ -70,7 +70,7 @@ zhangs          63.90               68.91
 
 
 
-Defenses: (Avg. Score: average score on all attacks, Atk. Score: average score on 3 attacks that attacks best against the model)
+Defenses: (Avg. Score: average score on all attacks, Atk. Score: average score on 3 attacks that makes the model performs worst)
 
 
 Model          Avg. Score         Def. Score 
