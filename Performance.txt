@@ -95,7 +95,7 @@ neutrino        47.03               18.69
 
 simong          55.58               50.68
 
-tsail
+tsail           64.44               63.04
 
 adversaries     67.21               65.38
 
