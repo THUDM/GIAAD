@@ -1,4 +1,6 @@
-Performance of attacks & defenses**
+Performance of attacks & defenses
+
+Score: Accuracy % for a model on test set against an attack
 
 Attacks: (Avg. Score: average score on all defense models, Atk. Score: average score on 3 defense models that defenses best against the attack) 
 
@@ -49,7 +51,7 @@ shengz          64.38               68.91
 
 sc              64.80               69.44
 
-simongeisler    61.41               69.11
+simongeisler    61.41(best)         69.11
 
 tofu            64.29               68.91
 
@@ -59,7 +61,7 @@ yaowenxi        64.17               68.91
 
 tzpppp          64.69               68.91
 
-u1234x1234      62.25               67.14
+u1234x1234      62.25               67.14(best)
 
 zhangs          63.90               68.91
 
@@ -69,4 +71,33 @@ zhangs          63.90               68.91
 
 
 Defenses: (Avg. Score: average score on all attacks, Atk. Score: average score on 3 attacks that attacks best against the model)
+
+
+Model          Avg. Score         Def. Score 
+
+ntt             67.75               60.54
+
+speit           70.95(best)         68.61(best)
+
+u1234           68.12               65.66 
+
+dminer          67.75               67.01
+
+msupsu          63.56               63.35
+
+idvl            66.19               65.05
+
+cccn            53.46               45.32
+
+daftstone       67.01               66.65
+
+neutrino        47.03               18.69
+
+simong          55.58               50.68
+
+tsail
+
+adversaries     67.21               65.38
+
+
 
