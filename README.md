@@ -78,4 +78,4 @@ Like attacks, we also show two scores for defense: the **average score** which i
 
 **This dataset is credit to biendata and Tsinghua-KEG team, Xinyu Guan, Xu Zou and Yicheng Zhao.**
 
-**We welcome new submissions of attacks or defense models. If you're interested in submitting new attack/defend methods, or cooperate research on this topic, please contact zoux18@mails.tsinghua.edu.cn **
+**We welcome new submissions of attacks or defense models. If you're interested in submitting new attack/defend methods, or cooperate research on this topic, please contact** zoux18@mails.tsinghua.edu.cn 
