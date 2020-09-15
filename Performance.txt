@@ -7,63 +7,63 @@ Attacks: (Avg. Score: average score on all defense models, Atk. Score: average s
 
 Attack       Avg. Score          Atk. Score
 
-no attack       65.39               69.85
+no attack       65.54               70.02
 
-ADVERSARIES     63.98               69.01
+ADVERSARIES     62.84               69.33
 
-DaftStone       63.80               69.37
+DaftStone       63.77               69.37
 
-DeepBlueAI      61.68               68.91
+DeepBlueAI      61.20               69.36
 
-Dminers         63.96               68.91
+Dminers         62.66               69.36
 
-Fengari         64.36               68.91
+Fengari         63.54               69.41
 
-GraphOverflow   64.36               68.96
+GraphOverflow   63.15               69.37
 
-MSU_PSU_DSE     65.27               69.84
+MSU_PSU_DSE     65.39               69.98
 
-NTTDOCOMOLABS   62.70               69.02
+NTTDOCOMOLABS   61.25               69.20
 
-Neutrino        64.28               68.91
+Neutrino        63.13               69.39
 
-RunningZ        64.37               68.91
+RunningZ        63.91               69.38
 
-SPEIT           61.86               69.16
+SPEIT           60.63               69.52
 
-Selina          64.59               68.91
+Selina          64.28               69.37
 
-TSAIL           64.07               68.91
+TSAIL           63.00               69.40
 
 cccn            63.68               69.32
 
-darkhorse       64.15               68.91
+darkhorse       63.60               69.30
 
-kaige           64.46               69.04
+kaige           63.55               69.44
 
-idvl            64.07               68.98
+idvl            62.69               69.44
 
-hhhvjk          64.71               68.91
+hhhvjk          64.86               69.33
 
-fashui01        64.27               68.91
+fashui01        63.26               69.45
 
-shengz          64.38               68.91
+shengz          63.31               69.39
 
 sc              64.80               69.44
 
-simongeisler    61.41(best)         69.11
+simongeisler    60.64               69.44
 
-tofu            64.29               68.91
+tofu            63.62               69.37
 
-yama            63.94               68.28
+yama            64.06               68.68
 
-yaowenxi        64.17               68.91
+yaowenxi        63.62               69.30
 
-tzpppp          64.69               68.91
+tzpppp          64.86               69.33
 
-u1234x1234      62.25               67.14(best)
+u1234x1234      62.49               68.01(best)
 
-zhangs          63.90               68.91
+zhangs          63.38               69.41
 
 
 
