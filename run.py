@@ -6,6 +6,7 @@ import numpy as np
 import sys
 import os
 import argparse
+import copy
 parser = argparse.ArgumentParser(description="Run .")
 parser.add_argument('--mode',default='attack')
 parser.add_argument('--apaths',nargs='+',type=str,default=['no','DeepBlueAI'])
@@ -28,14 +29,18 @@ end=len(base_features)
 
 def evaluate_adversaries(adj,features,labels):
     from adversaries import predict
-    label_predict=predict.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=predict.predict(ad,feat)[start:end]
     kr=(label_predict==labels).sum()
     print("accuracy ADVERSARIES",kr/50000)
     return kr
 
 def evaluate_speit(adj,features,labels):
     from speit import defender
-    label_predict=defender.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=defender.predict(ad,feat)[start:end]
     kr=(label_predict==labels).sum()
     print("accuracy SPEIT",kr/50000)
     return kr
@@ -43,14 +48,18 @@ def evaluate_speit(adj,features,labels):
 def evaluate_dminer(adj,features,labels):
     
     from dminer import pred
-    label_predict=pred.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=pred.predict(ad,feat)[start:end]
     kr=(label_predict==labels).sum()
     print("accuracy Dminers",kr/50000)
     return kr
 
 def evaluate_daftstone(adj,features,labels):
     from daftstone import defense
-    label_predict=defense.validate(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=defense.validate(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy Daftstone",kr/50000)
@@ -58,7 +67,9 @@ def evaluate_daftstone(adj,features,labels):
     
 def evaluate_ntt(adj,features,labels):
     from ntt import app
-    label_predict=app.nmain(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=app.nmain(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy NTT DOCOMO LABS",kr/50000)
@@ -66,7 +77,9 @@ def evaluate_ntt(adj,features,labels):
 
 def evaluate_u1234(adj,features,labels):
     from u1234 import umain
-    label_predict=umain.umain(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=umain.umain(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy u1234x1234",kr/50000)
@@ -75,8 +88,9 @@ def evaluate_u1234(adj,features,labels):
 def evaluate_cccn(adj,features,labels):
     sys.path.append("cccn/")
     from cccn import cmain
-    
-    label_predict=cmain.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=cmain.predict(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy cccn",kr/50000)
@@ -86,8 +100,9 @@ def evaluate_cccn(adj,features,labels):
 def evaluate_tsail(adj,features,labels):
     sys.path.append("tsail/")
     from tsail import tmain
-
-    label_predict=tmain.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=tmain.predict(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy tsail",kr/50000)
@@ -97,7 +112,9 @@ def evaluate_tsail(adj,features,labels):
 def evaluate_idvl(adj,features,labels):
     sys.path.append("idvl/")
     from idvl import main2
-    label_predict=main2.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=main2.predict(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy idvl",kr/50000)
@@ -107,7 +124,9 @@ def evaluate_idvl(adj,features,labels):
 def evaluate_msupsu(adj,features,labels):
     sys.path.append("msupsu/")
     from msupsu import mdefender
-    label_predict=mdefender.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=mdefender.predict(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy MSU-PSU-DSE",kr/50000)
@@ -116,7 +135,9 @@ def evaluate_msupsu(adj,features,labels):
 def evaluate_neutrino(adj,features,labels):
     sys.path.append("neutrino/")
     from neutrino import run
-    label_predict=run.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=run.predict(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy Neutrino",kr/50000)
@@ -126,7 +147,9 @@ def evaluate_neutrino(adj,features,labels):
 def evaluate_simong(adj,features,labels):
     sys.path.append("simong/")
     from simong import smain
-    label_predict=smain.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=smain.predict(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy simongeisler",kr/50000)
@@ -136,7 +159,9 @@ def evaluate_simong(adj,features,labels):
 def evaluate_arbitary(adj,features,labels):
     sys.path.append("arbitary/")
     from arbitary import defend
-    label_predict=defend.predict(adj,features)[start:end]
+    feat=copy.copy(features)
+    ad=copy.copy(adj)
+    label_predict=defend.predict(ad,feat)[start:end]
     kr=(label_predict==labels)
     kr=kr.sum()
     print("accuracy arbitary model",kr/50000)
