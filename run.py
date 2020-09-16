@@ -174,13 +174,13 @@ def combine_features(adj,features,name):
         return adj,features
     add_adj=pkl.load(open("submissions/"+name+"/adj.pkl",'rb'))
     add_features=np.load("submissions/"+name+"/feature.npy")
-    nfeature=np.concatenate([add_features,features],0)
+    nfeature=np.concatenate([features,add_features],0)
     total=len(features)
     adj_added1=add_adj[:,:total]
-    adj=sp.vstack([adj_added1,adj])
+    adj=sp.vstack([adj,adj_added1])
    # print(adj_added.shape)
     
-    adj=sp.hstack([add_adj.transpose(),adj])
+    adj=sp.hstack([adj,add_adj.transpose()])
     for i in range(len(adj.data)):
         if (adj.data[i]!=0) and (adj.data[i]!=1):
             adj.data[i]=1
@@ -191,6 +191,22 @@ if __name__ == "__main__":
     from dminer.dmain import GraphSAGE
     import torch
     list_evaluate=['ADVERSARIES','cccn','DaftStone','darkhorse','DeepBlueAI','Dminers','fashui01','Fengari','GraphOverflow','hhhvjk','idvl','MSU_PSU_DSE','kaige','zhangs','shengz','sc','Neutrino','NTTDOCOMOLABS','RunningZ','Selina','simongeisler','SPEIT','tofu','TSAIL','tzpppp','u1234x1234','yama','yaowenxi']
+    if args.mode=="quick":
+        r_evaluate=args.apaths
+        
+                
+        for i in r_evaluate:
+            print("Evaluating ",i," attack")
+            adj=base_adj
+            features=base_features
+            adj,features=combine_features(adj,features,i)
+            start=len(base_features)-50000
+            end=len(base_features)
+            scores=[]
+            score_speit=evaluate_speit(adj,features,labels)
+            scores.append(['speit',score_speit])
+            
+            print('attack score=',scores[0][1]/50000)
     if args.mode=="attack":
         r_evaluate=args.apaths
     
@@ -200,8 +216,8 @@ if __name__ == "__main__":
             adj=base_adj
             features=base_features
             adj,features=combine_features(adj,features,i)
-            start=len(features)-50000
-            end=len(features)
+            start=len(base_features)-50000
+            end=len(base_features)
             scores=[]
             score_simong=evaluate_simong(adj,features,labels)
             scores.append(['simong',score_simong])
@@ -260,8 +276,8 @@ if __name__ == "__main__":
                 features=base_features
                 adj,features=combine_features(adj,features,i)
                 
-                start=len(features)-50000
-                end=len(features)
+                start=len(base_features)-50000
+                end=len(base_features)
                 
                 exec(defend_function)
                 torch.cuda.empty_cache()
