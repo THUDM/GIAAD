@@ -29,7 +29,7 @@ Neutrino        63.13               69.39
 
 RunningZ        63.91               69.38
 
-SPEIT           60.63               69.52
+SPEIT           60.63(best)         69.52
 
 Selina          64.28               69.37
 
