@@ -191,6 +191,7 @@ if __name__ == "__main__":
     from dminer.dmain import GraphSAGE
     import torch
     list_evaluate=['ADVERSARIES','cccn','DaftStone','darkhorse','DeepBlueAI','Dminers','fashui01','Fengari','GraphOverflow','hhhvjk','idvl','MSU_PSU_DSE','kaige','zhangs','shengz','sc','Neutrino','NTTDOCOMOLABS','RunningZ','Selina','simongeisler','SPEIT','tofu','TSAIL','tzpppp','u1234x1234','yama','yaowenxi']
+    weights=[24,18,12,10,8,7,6,5,4,3,2,1]
     if args.mode=="quick":
         r_evaluate=args.apaths
         
@@ -216,8 +217,10 @@ if __name__ == "__main__":
             adj=base_adj
             features=base_features
             adj,features=combine_features(adj,features,i)
+            
             start=len(base_features)-50000
             end=len(base_features)
+            print(start,end)
             scores=[]
             score_simong=evaluate_simong(adj,features,labels)
             scores.append(['simong',score_simong])

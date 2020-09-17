@@ -9,61 +9,61 @@ Attack       Avg. Score          Atk. Score
 
 no attack       65.54               70.02
 
-ADVERSARIES     62.84               69.33
+ADVERSARIES     63.44               68.85
 
-DaftStone       63.77               69.37
+DaftStone       63.91               68.50
 
-DeepBlueAI      61.20               69.36
+DeepBlueAI      61.44               69.4
 
-Dminers         62.66               69.36
+Dminers         63.76               69.39
 
-Fengari         63.54               69.41
+Fengari         63.78               69.41
 
-GraphOverflow   63.15               69.37
+GraphOverflow   63.75               69.34
 
-MSU_PSU_DSE     65.39               69.98
+MSU_PSU_DSE     65.49               69.97
 
-NTTDOCOMOLABS   61.25               69.20
+NTTDOCOMOLABS   60.23               68.80
 
-Neutrino        63.13               69.39
+Neutrino        63.63               69.42
 
-RunningZ        63.91               69.38
+RunningZ        63.94               69.40
 
-SPEIT           60.63(best)         69.52
+SPEIT           61.95(best)         69.49
 
-Selina          64.28               69.37
+Selina          64.68               69.40
 
-TSAIL           63.00               69.40
+TSAIL           65.01               69.38
 
-cccn            63.68               69.32
+cccn            63.11               69.26
 
-darkhorse       63.60               69.30
+darkhorse       63.93               69.33
 
-kaige           63.55               69.44
+kaige           63.90               69.41
 
-idvl            62.69               69.44
+idvl            63.57               69.42
 
 hhhvjk          64.86               69.33
 
-fashui01        63.26               69.45
+fashui01        63.67               69.42
 
-shengz          63.31               69.39
+shengz          64.00               69.40
 
-sc              64.80               69.44
+sc              64.47               69.11
 
-simongeisler    60.64               69.44
+simongeisler    60.03               68.59
 
-tofu            63.62               69.37
+tofu            63.87               69.39
 
-yama            64.06               68.68
+yama            64.20               68.77
 
-yaowenxi        63.62               69.30
+yaowenxi        63.92               69.33
 
-tzpppp          64.86               69.33
+tzpppp          64.99               69.38
 
-u1234x1234      62.49               68.01(best)
+u1234x1234      61.18               67.95(best)
 
-zhangs          63.38               69.41
+zhangs          63.75               69.43
 
 
 
@@ -75,29 +75,29 @@ Defenses: (Avg. Score: average score on all attacks, Atk. Score: average score o
 
 Model          Avg. Score         Def. Score 
 
-ntt             67.75               60.54
+ntt             67.12               54.67
 
-speit           70.95(best)         68.61(best)
+speit           70.70(best)         66.90(best)
 
-u1234           68.12               65.66 
+u1234           67.84               64.15 
 
-dminer          67.75               67.01
+dminer          67.60               66.74
 
 msupsu          63.56               63.35
 
-idvl            66.19               65.05
+idvl            65.87               64.16
 
-cccn            53.46               45.32
+cccn            58.22               53.18
 
-daftstone       67.01               66.65
+daftstone       67.01               66.64
 
-neutrino        47.03               18.69
+neutrino        47.64               23.76
 
-simong          55.58               50.68
+simong          54.60               49.92
 
-tsail           64.44               63.04
+tsail           64.51               62.12
 
-adversaries     67.21               65.38
+adversaries     67.11               64.58
 
 
 
