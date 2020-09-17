@@ -29,7 +29,7 @@ Neutrino        63.63               69.42
 
 RunningZ        63.94               69.40
 
-SPEIT           61.95(best)         69.49
+SPEIT           61.95               69.49
 
 Selina          64.68               69.40
 
@@ -51,7 +51,7 @@ shengz          64.00               69.40
 
 sc              64.47               69.11
 
-simongeisler    60.03               68.59
+simongeisler    60.03(best)         68.59
 
 tofu            63.87               69.39
 
