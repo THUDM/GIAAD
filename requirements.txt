@@ -4,9 +4,11 @@ xgboost
 pandas
 sklearn
 tqdm
-torch=1.6.0+cu101
+torch
 matplotlib
 scikit-learn
 torch_geometric
-dgl-cu101
+dgl
+tf_slim
+
 

@@ -11,7 +11,24 @@ adversaries, cccn, ntt docomo labs, daftstone, dminer, idvl, msu-psu-dse, neutri
 
 The original submissions are under Docker virtual environment.  To enable usage for people with difficulty to access docker, and also unify the working environment, **we remove all docker-related issues in the released codes and unify the environments of their codes.**
 
-The codes are under the following environments
+Basically, to run the code, you need to install the following packages. Make sure the cuda version and pytorch version of all packages are consistent. 
+
+numpy
+flask
+xgboost
+pandas
+sklearn
+tqdm
+torch
+matplotlib
+scikit-learn
+torch_geometric
+dgl
+joblib
+tf_slim
+
+
+The codes are confirmed to work well under the following environments
 
 ``python 3.7.3 cuda 10.1``
 

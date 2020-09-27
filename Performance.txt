@@ -2,68 +2,68 @@ Performance of attacks & defenses
 
 Score: Accuracy % for a model on test set against an attack
 
-Attacks: (Avg. Score: average score on all defense models, Atk. Score: average score on 3 defense models that defenses best against the attack) 
+Attacks: (Avg. Score: average score on all defense models, Top 3-Avg: average score on 3 defense models that defenses best against the attack, Atk. Score: weighted average on all defense models, weight=[0.24,0.18,0.12,0.1,0.08,0.06,0.05,0,04,0.03,0.02,0.01] according to the inverse order of model performance on the attack) 
 
 
-Attack       Avg. Score          Atk. Score
+Attack       Avg. Score          Top 3-Avg       Atk. Score
 
-no attack       65.54               70.02
+no attack       65.54               70.02         68.57
 
-ADVERSARIES     63.44               68.85
+ADVERSARIES     63.44               68.85         67.09
 
-DaftStone       63.91               68.50
+DaftStone       63.91               68.50         67.02
 
-DeepBlueAI      61.44               69.4
+DeepBlueAI      61.44               69.4          67.26
 
-Dminers         63.76               69.39
+Dminers         63.76               69.39         67.48
 
-Fengari         63.78               69.41
+Fengari         63.78               69.41         67.45
 
-GraphOverflow   63.75               69.34
+GraphOverflow   63.75               69.34         67.44         
 
-MSU_PSU_DSE     65.49               69.97
+MSU_PSU_DSE     65.49               69.97         68.52
 
-NTTDOCOMOLABS   60.23               68.80
+NTTDOCOMOLABS   60.21               68.80         66.27
 
-Neutrino        63.63               69.42
+Neutrino        63.62               69.42         67.42
 
-RunningZ        63.94               69.40
+RunningZ        63.96               69.40         67.55
 
-SPEIT           61.95               69.49
+SPEIT           61.97               69.49         67.32
 
-Selina          64.68               69.40
+Selina          64.67               69.40         67.79
 
-TSAIL           65.01               69.38
+TSAIL           63.90               69.40         67.55
 
-cccn            63.11               69.26
+cccn            63.11               69.26         67.28
 
-darkhorse       63.93               69.33
+darkhorse       63.94               69.33         67.51
 
-kaige           63.90               69.41
+kaige           63.90               69.41         67.49
 
-idvl            63.57               69.42
+idvl            63.57               69.42         67.39
 
-hhhvjk          64.86               69.33
+hhhvjk          65.00               69.38         67.93
 
-fashui01        63.67               69.42
+fashui01        63.69               69.42         67.42
 
-shengz          64.00               69.40
+shengz          63.99               69.40         67.55
 
-sc              64.47               69.11
+sc              64.48               69.11         67.41
 
-simongeisler    60.03(best)         68.59
+simongeisler    60.02(best)         68.59         66.29
 
-tofu            63.87               69.39
+tofu            63.87               69.39         67.50
 
-yama            64.20               68.77
+yama            64.21               68.77         67.23
 
-yaowenxi        63.92               69.33
+yaowenxi        63.94               69.33         67.50
 
-tzpppp          64.99               69.38
+tzpppp          65.01               69.38         67.94
 
-u1234x1234      61.18               67.95(best)
+u1234x1234      61.18               67.95(best)   64.87(best)
 
-zhangs          63.75               69.43
+zhangs          63.73               69.43         67.51
 
 
 

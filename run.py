@@ -263,9 +263,14 @@ if __name__ == "__main__":
             for item in scores:
                 sc.append(item[1])
             print("average score=",np.average(sc)/50000)
+            
             for j in range(3):
                 print(scores[j])
-            print('attack score=',np.average(sc[:3])/50000)
+            sumscore=0
+            for j in range(12):
+                sumscore+=scores[j][1]*weights[j]*0.01
+            print('3-avg score=',np.average(sc[:3])/50000)
+            print('attack score=',sumscore/50000)
         
     if args.mode=="defend":
         allscores=[]
