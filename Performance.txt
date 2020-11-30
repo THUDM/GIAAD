@@ -100,4 +100,6 @@ tsail           64.51               62.12
 adversaries     67.11               64.58
 
 
+Welcome for submissions of attack/defense methods. If your attack/defense is strong enough you may be added onto this list too. 
 
+Submitted attacks shall be generated not using information from defense models, while submitted defense model shall not be generated using information from attack features/adjs. 
