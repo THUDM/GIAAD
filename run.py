@@ -27,6 +27,42 @@ labels=np.load("dset/labels_test.npy")
 start=len(base_features)-50000
 end=len(base_features)
 
+def check_injection(adj,features):
+    # adj: 500*650000
+    m=np.max(np.abs(features))
+    if len(features[0])!=100:
+        print("dimension mismatch!")
+        return 1
+    
+    if m>2:
+        print("feature too large!")
+        return 1
+    for i in range(len(adj.data)):
+        if (adj.data[i]!=1) and (adj.data[i]!=0):
+            adj.data[i]=1
+    
+    rowsum=adj.sum(1)
+    #print(rowsum)
+    for i in range(len(rowsum[0])):
+        if rowsum[0][i]>100:
+            print("too large degree at node ",i," !")
+            return 1
+    row,col=adj.shape
+    asp=adj[:,-row:]
+    ass=asp-asp.transpose()
+    wc=np.abs(ass.data.sum())
+    if wc>0:
+        print("matrix not consistent! ")
+        return 1
+    for i in range(row):
+        if asp[i,i]>0:
+            print("contain self-loop!")
+            return 1
+    return 0
+    
+    
+    
+    
 def evaluate_adversaries(adj,features,labels):
     from adversaries import predict
     feat=copy.copy(features)
@@ -170,11 +206,17 @@ def evaluate_arbitary(adj,features,labels):
     
 def combine_features(adj,features,name):
     import scipy.sparse as sp
+
     if name=="no":
         return adj,features
     add_adj=pkl.load(open("submissions/"+name+"/adj.pkl",'rb'))
     add_features=np.load("submissions/"+name+"/feature.npy")
+    ww=check_injection(add_adj,add_features)
+    if ww==1:
+        print("format inappropriate, not adding")
+        return adj,features
     nfeature=np.concatenate([features,add_features],0)
+    
     total=len(features)
     adj_added1=add_adj[:,:total]
     adj=sp.vstack([adj,adj_added1])
@@ -204,8 +246,8 @@ if __name__ == "__main__":
             start=len(base_features)-50000
             end=len(base_features)
             scores=[]
-            score_speit=evaluate_speit(adj,features,labels)
-            scores.append(['speit',score_speit])
+            score_speit=evaluate_dminer(adj,features,labels)
+            scores.append(['dminer',score_speit])
             
             print('attack score=',scores[0][1]/50000)
     if args.mode=="attack":
