@@ -70,8 +70,9 @@ The codes are confirmed to work well under the following environments, however i
 
 Notice a bug in dgl package:
 dgl/nn/pytorch/conv/sgconv.py", line 167, 
-    if not self._allow_zero_in_degree:
-you shall change that to "if True:" 
+    "if not self._allow_zero_in_degree:" this will yield you an error. 
+    
+To fix this, you shall change that to "if True:" 
     
 Once you setup the environments, you can start your trial.
 
