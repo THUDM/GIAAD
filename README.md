@@ -14,13 +14,13 @@ The original submissions are under Docker virtual environment.  To enable usage 
 Basically, to run the code, you need to install the following packages. Make sure the cuda version and pytorch version of all packages are consistent. 
 
 numpy
+scipy
 flask
 xgboost
 pandas
 sklearn
 tqdm
 torch
-matplotlib
 scikit-learn
 torch_geometric
 dgl
@@ -28,7 +28,7 @@ joblib
 tf_slim
 
 
-The codes are confirmed to work well under the following environments
+The codes are confirmed to work well under the following environments, however if you properly installed the packages before it shall work well, too.
 
 ``python 3.7.3 cuda 10.1``
 
@@ -68,7 +68,11 @@ The codes are confirmed to work well under the following environments
 
 ``pandas=0.24.2``
 
-
+Notice a bug in dgl package:
+dgl/nn/pytorch/conv/sgconv.py", line 167, 
+    if not self._allow_zero_in_degree:
+you shall change that to "if True:" 
+    
 Once you setup the environments, you can start your trial.
 
 To attack, you shall create a package under ``submissions`` package with an ``adj.pkl`` representing the injection nodes' links and ``features.npy`` representing their features. We already provide the submission attack files. For example, to evaluate on the submissions of speit, all you need is to unzip it.
