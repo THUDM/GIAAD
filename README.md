@@ -13,22 +13,22 @@ The original submissions are under Docker virtual environment.  To enable usage 
 
 Basically, to run the code, you need to install the following packages. Make sure the cuda version and pytorch version of all packages are consistent. 
 
-numpy
-scipy
-flask
-xgboost
-pandas
-sklearn
-tqdm
-torch
-scikit-learn
-torch_geometric
-dgl
-joblib
-tf_slim
+``numpy``
+``scipy``
+``flask``
+``xgboost``
+``pandas``
+``sklearn``
+``tqdm``
+``torch``
+``scikit-learn``
+``torch_geometric``
+``dgl``
+``joblib``
+``tf_slim``
 
 
-The codes are confirmed to work well under the following environments, however if you properly installed the packages before it shall work well, too.
+If you still have problems, the following condition is confirmed to work well (assuming you have fix the dgl bug):
 
 ``python 3.7.3 cuda 10.1``
 
