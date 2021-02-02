@@ -98,6 +98,8 @@ We also support evaluation of defense models. To run defend on a certain model, 
 
 Like attacks, we also show two scores for defense: the **average score** which is the average accuracy on the test set of the defense model over all attacks,(you shall unzip all of the attacks in ``submissions`` first) and the **defend score**  is the average accuracy over 3 best attack. A defend shall be robust to generalize on all sorts of attacks so the evaluation is based on the average of 3 best attacks against the defender.
 
+The performance of each attack and defense methods can be found in ``performance.txt``
+
 **This dataset is credit to biendata and Tsinghua-KEG team, Xinyu Guan, Xu Zou and Yicheng Zhao.**
 
 **We welcome new submissions of attacks or defense models. If you're interested in submitting new attack/defend methods, or cooperate research on this topic, please contact** zoux18@mails.tsinghua.edu.cn 
