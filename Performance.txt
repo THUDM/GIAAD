@@ -65,7 +65,8 @@ u1234x1234      61.18               67.95(best)   64.87(best)
 
 zhangs          63.73               69.43         67.51
 
-
+---------------------------------------------------------
+TDGIA(anonymous) 55.00             64.49         60.49 
 
 
 
@@ -98,6 +99,8 @@ simong          54.60               49.92
 tsail           64.51               62.12
 
 adversaries     67.11               64.58
+
+
 
 
 Welcome for submissions of attack/defense methods. If your attack/defense is strong enough you may be added onto this list too. 
