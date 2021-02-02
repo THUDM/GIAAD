@@ -70,10 +70,10 @@ zhangs          63.73               69.43         67.51
 
 
 
-Defenses: (Avg. Score: average score on all attacks, Atk. Score: average score on 3 attacks that makes the model performs worst)
+Defenses: (Avg. Score: average score on all attacks, Top-3 Avg: average score on 3 attacks that makes the model performs worst)
 
 
-Model          Avg. Score         Def. Score 
+Model          Avg. Score         Top-3 Avg 
 
 ntt             67.12               54.67
 
