@@ -54,10 +54,12 @@ def check_injection(adj,features):
     if wc>0:
         print("matrix not consistent! ")
         return 1
+    '''
     for i in range(row):
         if asp[i,i]>0:
             print("contain self-loop!")
             return 1
+    '''
     return 0
     
     
