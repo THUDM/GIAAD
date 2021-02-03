@@ -106,3 +106,5 @@ adversaries     67.11               64.58
 Welcome for submissions of attack/defense methods. If your attack/defense is strong enough you may be added onto this list too. 
 
 Submitted attacks shall be generated not using information(weights) from defense models, while submitted defense model shall not be generated using information from attack features/adjs. 
+
+Submitted attacks shall follow the KDD-CUP rules that 1: the number of injection nodes shall not exceed 500 2: the degree of each injection node shall not exceed 100 3: the features of the injection nodes shall be in range (-2,2).
