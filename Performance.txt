@@ -9,6 +9,8 @@ Attack       Avg. Score          Top 3-Avg       Atk. Score
 
 no attack       65.54               70.02         68.57
 
+----------------------Competition Submissions------------------------
+
 ADVERSARIES     63.44               68.85         67.09
 
 DaftStone       63.91               68.50         67.02
@@ -65,7 +67,8 @@ u1234x1234      61.18               67.95(best)   64.87(best)
 
 zhangs          63.73               69.43         67.51
 
----------------------------------------------------------
+-------------------Research Submissions------------------------------
+
 TDGIA(anonymous) 55.00             64.49         60.49 
 
 
