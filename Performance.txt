@@ -111,3 +111,5 @@ Welcome for submissions of attack/defense methods. If your attack/defense is str
 Submitted attacks shall be generated not using information(weights) from defense models, while submitted defense model shall not be generated using information from attack features/adjs, or labels in evaluation set.
 
 Submitted attacks shall follow the KDD-CUP rules that 1: the number of injection nodes shall not exceed 500 2: the degree of each injection node shall not exceed 100 3: the features of the injection nodes shall be in range (-2,2).
+
+Submitted defenses shall be generated not using test labels or any attack submissions. It shall be general to injection of any scale, not designed in a "chart mode" that only outputs labels by hash of input features, and able to finish running in 10 seconds on any attacks. 
