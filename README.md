@@ -102,4 +102,4 @@ The performance of each attack and defense methods can be found in ``performance
 
 **This dataset is credit to biendata and Tsinghua-KEG team, Xinyu Guan, Xu Zou and Yicheng Zhao.**
 
-**We welcome new submissions of attacks or defense models. If you're interested in submitting new attack/defend methods, or cooperate research on this topic, please contact** zoux18@mails.tsinghua.edu.cn 
+**We welcome new submissions of attacks or defense models. If you're interested in submitting new attack/defend methods, or cooperate research on this topic, please contact** xuzou_keg@outlook.com
